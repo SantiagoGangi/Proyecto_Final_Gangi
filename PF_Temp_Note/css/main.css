@@ -1,19 +1,27 @@
 @charset "UTF-8";
-.section-2 {
+.section-2,
+.section-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 70px 20px;
 }
-.section-2 h2 {
+.section-2 p,
+.section-3 p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.section-2 h2,
+.section-3 h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #0d47a1;
   margin-bottom: 40px;
   text-align: center;
 }
-.section-2 .cards {
+.section-2 .cards,
+.section-3 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
@@ -21,11 +29,13 @@
   max-width: 950px;
 }
 @media (max-width: 800px) {
-  .section-2 .cards {
+  .section-2 .cards,
+  .section-3 .cards {
     grid-template-columns: 1fr;
   }
 }
-.section-2 .card {
+.section-2 .card,
+.section-3 .card {
   background: white;
   border-radius: 18px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -34,17 +44,20 @@
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: float 5s ease-in-out infinite;
 }
-.section-2 .card:hover {
+.section-2 .card:hover,
+.section-3 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
-.section-2 h3 {
+.section-2 h3,
+.section-3 h3 {
   font-size: 1.5rem;
   color: #0d47a1;
   margin-bottom: 20px;
   text-decoration: underline;
 }
-.section-2 .two-columns {
+.section-2 .two-columns,
+.section-3 .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
   column-gap: 60px; /* Espacio amplio entre columnas */
@@ -55,7 +68,8 @@
   width: 100%;
   max-width: 420px; /* Ahora más ancho para que no se solapen */
 }
-.section-2 .two-columns li {
+.section-2 .two-columns li,
+.section-3 .two-columns li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -64,30 +78,61 @@
   white-space: nowrap;
   cursor: default;
 }
-.section-2 .two-columns li:hover {
+.section-2 .two-columns li:hover,
+.section-3 .two-columns li:hover {
   color: #0096c7;
   transform: translateX(5px);
 }
-.section-2 .two-columns li::before {
+.section-2 .two-columns li::before,
+.section-3 .two-columns li::before {
   content: "•";
   color: #0096c7;
   font-weight: bold;
   margin-right: 6px;
 }
 @media (max-width: 380px) {
-  .section-2 .two-columns {
+  .section-2 .two-columns,
+  .section-3 .two-columns {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .section-2 .two-columns li {
+  .section-2 .two-columns li,
+  .section-3 .two-columns li {
     justify-content: center;
   }
 }
-.section-2 i {
+.section-2 i,
+.section-3 i {
   color: #1565c0;
   min-width: 20px;
   text-align: center;
   margin-right: 5px;
+}
+.section-2 .srv,
+.section-3 .srv {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 35px 25px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.section-2 .srv:hover,
+.section-3 .srv:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.section-2 span,
+.section-3 span {
+  color: #fff;
+  margin-right: 10px;
+}
+.section-2 svg,
+.section-3 svg {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 6px;
 }
 
 @keyframes float {
@@ -124,9 +169,30 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: aparecer 1.5s ease-out, flotar 2s ease-in-out infinite;
 }
 .header h1 {
   font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes flotar {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -56%);
+  }
 }
 
 #bgCarousel {
@@ -157,20 +223,33 @@
 }
 
 .custom-navbar {
-  background-color: #007bff; /* verde */
+  background-color: #007bff;
 }
 .custom-navbar .nav-link {
-  color: white; /* siempre blanco */
+  color: white;
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(76.5, 162.6, 255), #ffffff);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
 }
 .custom-navbar .nav-link:hover {
-  background-color: #0096c7; /* Sombra */
-  border-radius: 5px;
-  font-weight: bold;
+  color: #ffffff;
 }
 .custom-navbar .nav-link:active {
-  color: #90e0ef; /* Color al presionar */
-  font-weight: bold;
+  color: #90e0ef;
 }
 
 * {
@@ -180,10 +259,24 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #e0f7fa, #e4f0fc);
+  background: linear-gradient(135deg, #f3f9ff, #d6ecff, #e3f3ff, #cde4ff);
+  background-size: 600% 600%;
+  animation: fondoLuzSuave 10s ease-in-out infinite;
   min-height: 100vh;
+  margin: 0;
 }
 
+@keyframes fondoLuzSuave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 main {
   display: flex;
   justify-content: center;
@@ -215,7 +308,7 @@ main p {
   font-size: 1.2rem;
   text-align: center;
 }
-main a {
+main span {
   color: white;
   text-decoration: none;
 }
@@ -243,9 +336,11 @@ footer p, footer span {
 }
 
 .btn {
+  display: inline-block;
   background-color: #007bff;
   color: white;
-  padding: 15px 30px;
+  text-decoration: none;
+  padding: 15px 40px;
   font-size: 1.2rem;
   border: none;
   border-radius: 8px;
@@ -253,6 +348,25 @@ footer p, footer span {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 .btn:hover {
+  background-color: #0096c7;
+  transform: scale(1.05);
+}
+
+.btn-d {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-d:hover {
   background-color: #0096c7;
   transform: scale(1.05);
 }

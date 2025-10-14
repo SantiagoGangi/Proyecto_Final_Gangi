@@ -1,21 +1,36 @@
 @use "../utilities/variables" as *;
 
 .custom-navbar {
-  background-color: $first-color; /* verde */
+  background-color: $first-color;
 
   .nav-link {
-    color: white; /* siempre blanco */
+    color: white;
     font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, lighten($first-color, 15%), #ffffff);
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
 
     &:hover {
-      background-color: $hover-color; /* Sombra */
-      border-radius: 5px;
-      font-weight: bold;
+      color: #ffffff;
     }
 
     &:active {
-      color: $active-color; /* Color al presionar */
-      font-weight: bold;
+      color: $active-color;
     }
   }
 }
