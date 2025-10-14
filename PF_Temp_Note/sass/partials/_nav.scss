@@ -1,0 +1,21 @@
+@use "../utilities/variables" as *;
+
+.custom-navbar {
+  background-color: $first-color; /* verde */
+
+  .nav-link {
+    color: white; /* siempre blanco */
+    font-weight: bold;
+
+    &:hover {
+      background-color: $hover-color; /* Sombra */
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    &:active {
+      color: $active-color; /* Color al presionar */
+      font-weight: bold;
+    }
+  }
+}

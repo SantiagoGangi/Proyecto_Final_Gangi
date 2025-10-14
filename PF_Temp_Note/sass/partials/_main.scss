@@ -1,0 +1,53 @@
+@use "../utilities/variables" as *;
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  animation: fadeIn 1s ease-in-out;
+
+  section {
+    border: 1px solid #ccc;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: $titulos-scd;
+    text-align: center;
+  }
+
+  p {
+    font-size: $textos;
+    text-align: center;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

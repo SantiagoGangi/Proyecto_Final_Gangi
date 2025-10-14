@@ -1,0 +1,111 @@
+@use "../utilities/variables" as *;
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $title-color;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: 100%;
+    max-width: 950px;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 35px 25px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: float 5s ease-in-out infinite;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $title-color;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+
+  .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    column-gap: 60px; /* Espacio amplio entre columnas */
+    row-gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px; /* Ahora más ancho para que no se solapen */
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 1rem;
+      color: #0d47a1;
+      white-space: nowrap;
+      cursor: default;
+
+      &:hover {
+        color: $hover-color;
+        transform: translateX(5px);
+      }
+
+      &::before {
+        content: "•";
+        color: $hover-color;
+        font-weight: bold;
+        margin-right: 6px;
+      }
+    }
+
+    @media (max-width:380px){
+        grid-template-columns: 1fr;
+        text-align: center;
+
+        li {
+            justify-content: center;
+        }
+    }
+  }
+
+  i {
+    color: #1565c0;
+    min-width: 20px;
+    text-align: center;
+    margin-right: 5px;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
