@@ -8,6 +8,7 @@ main {
   animation: fadeIn 1s ease-in-out;
 
   section {
+    will-change: transform;
     border: 1px solid #ccc;
     padding: 40px 30px;
     text-align: center;

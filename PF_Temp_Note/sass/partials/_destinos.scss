@@ -1,0 +1,76 @@
+@use "../utilities/variables" as *;
+
+.section-4,
+.section-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 20px;
+
+  p {
+    font-size: $textos;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: $titulos-scd;
+    font-weight: 700;
+    color: $title-color;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-decoration: underline;
+  }
+
+  .nacional,
+  .internacional {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+
+    .card {
+      will-change: transform;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      h5 {
+        font-size: 1.3rem;
+        margin: 15px 10px 5px;
+      }
+
+      p {
+        display: flex;
+        justify-content: left;
+        color: #555;
+        margin: 0 10px 15px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

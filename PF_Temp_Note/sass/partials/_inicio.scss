@@ -34,6 +34,7 @@
   }
 
   .card {
+    will-change: transform;
     background: white;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -67,6 +68,7 @@
     max-width: 420px; /* Ahora más ancho para que no se solapen */
 
     li {
+      will-change: transform;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -106,6 +108,7 @@
   }
 
   .srv {
+    will-change: transform;
     background: white;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);

@@ -1,6 +1,7 @@
 @use "../utilities/variables" as *;
 
 .btn {
+  will-change: transform;
   display: inline-block;
   background-color: $first-color;
   color: white;
@@ -19,9 +20,8 @@
 }
 
 .btn-d {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  will-change: transform;
+  display: inline-block;
   background-color: $first-color;
   color: white;
   text-decoration: none;
