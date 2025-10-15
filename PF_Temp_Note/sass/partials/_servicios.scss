@@ -5,8 +5,14 @@
     font-size: 2rem;
     font-weight: 700;
     color: $title-color;
-    margin: 40px auto;
+    margin: 40px auto 10px auto;
     text-align: center;
+  }
+
+  p {
+      font-size: $textos;
+      text-align: center;
+      margin-bottom: 40px;
   }
 
   .servicios-grid {
@@ -43,6 +49,9 @@
     @media (max-width: 800px) {
       grid-template-columns: repeat(2, 1fr);
     }
+    @media (max-width: 440px){
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -70,18 +79,36 @@
 
     h3 {
       font-size: 1.5rem;
-      color: #333;
+      color: $subtitle-color;
       margin-bottom: 15px;
       text-decoration: underline;
     }
 
     p {
       font-size: $textos;
-      margin: 0px 10px 10px 10px; //cambiar
+      text-align: center;
     }
 
     span {
       color: #fff;
     }
+  }
+}
+
+.servicios-ctd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px 20px 0px;
+  gap: 20px;
+
+  h3 {
+    font-size: $titulos-trh;
+    color: $title-color;
+  }
+
+  span{
+    color: #fff;
   }
 }

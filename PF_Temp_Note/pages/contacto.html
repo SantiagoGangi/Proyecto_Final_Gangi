@@ -93,3 +93,102 @@
         </button>
       </div>
     </nav>
+
+    <section class="contacto">
+      <div class="container-contacto">
+        <div class="intro">
+          <h2>¡Planificá tus próximas vacaciones!</h2>
+          <p>
+            Completá el formulario y uno de nuestros asesores se pondrá en
+            contacto con vos para diseñar el viaje perfecto según tus fechas,
+            destinos y preferencias.
+          </p>
+        </div>
+
+        <div class="contenido">
+          <!-- Bloque lateral de contacto -->
+          <div class="info-contacto">
+            <h3>Contactanos directamente</h3>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-dot"></i> Av. Principal 1234,
+                Buenos Aires, Argentina
+              </li>
+              <li><i class="fa-solid fa-phone"></i> +54 9 11 5555-5555</li>
+              <li>
+                <i class="fa-solid fa-envelope"></i> info@travelfascure.com
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i> Lunes a Viernes de 9:00 a
+                18:00 hs
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulario -->
+          <form class="formulario-contacto">
+            <div class="grupo">
+              <label>Nombre completo</label>
+              <input type="text" placeholder="Ej: Santiago Gangi" required />
+            </div>
+
+            <div class="grupo">
+              <label>Correo electrónico</label>
+              <input type="email" placeholder="Ej: santi@gmail.com" required />
+            </div>
+
+            <div class="grupo">
+              <label>Teléfono</label>
+              <input type="tel" placeholder="Ej: +54 9 11 5555-5555" />
+            </div>
+
+            <div class="grupo">
+              <label>Destino deseado</label>
+              <select required>
+                <option value="">Seleccioná un destino</option>
+                <option>Jujuy</option>
+                <option>Bariloche</option>
+                <option>Formosa</option>
+                <option>Brasil</option>
+                <option>Chile</option>
+                <option>Uruguay</option>
+              </select>
+            </div>
+
+            <div class="grupo">
+              <label>Fecha de salida</label>
+              <input type="date" required />
+            </div>
+
+            <div class="grupo">
+              <label>Duración estimada</label>
+              <input type="text" placeholder="Ej: 7 días, 10 noches" />
+            </div>
+
+            <div class="grupo grupo-textarea">
+              <label>Comentarios o preferencias</label>
+              <textarea
+                rows="4"
+                placeholder="Ej: Quisiera un paquete con excursiones y hotel con desayuno incluido..."
+              ></textarea>
+            </div>
+
+            <button type="submit">Enviar consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer-title">
+        &copy; <span class="footer-name">TravelFasCure</span>
+      </p>
+      <p class="footer-sub">Viajes increíbles, momentos inolvidables</p>
+    </footer>
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

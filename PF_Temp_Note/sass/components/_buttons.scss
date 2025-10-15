@@ -17,6 +17,10 @@
     background-color: $hover-color;
     transform: scale(1.05);
   }
+
+  &:active{
+    background-color: $active-btn !important;
+  }
 }
 
 .btn-d {
