@@ -11,6 +11,7 @@
     font-size: $titulos-scd;
     margin-bottom: 40px;
     color: $title-color;
+    font-weight: 700;
   }
 
   .info-contenido {
@@ -115,7 +116,7 @@
   }
 
   .info-extra {
-    background: linear-gradient(180deg, #0055b3, #003b80);
+    background: linear-gradient(180deg, #1c4fb1, #1c458c);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     color: #fff;
     padding: 40px 20px;

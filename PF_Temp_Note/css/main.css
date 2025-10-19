@@ -106,7 +106,7 @@
   color: #ffffff;
 }
 .custom-navbar .nav-link:active {
-  color: #90e0ef;
+  color: #48cbff;
 }
 
 main {
@@ -114,7 +114,6 @@ main {
   justify-content: center;
   align-items: center;
   margin: 40px 25px 10px 25px;
-  animation: fadeIn 1s ease-in-out;
 }
 main section {
   will-change: transform;
@@ -146,16 +145,6 @@ main span {
   text-decoration: none;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .section-2,
 .section-3 {
   display: flex;
@@ -239,13 +228,13 @@ main span {
 }
 .section-2 .two-columns li:hover,
 .section-3 .two-columns li:hover {
-  color: #0096c7;
+  color: #1eadff;
   transform: translateX(5px);
 }
 .section-2 .two-columns li::before,
 .section-3 .two-columns li::before {
   content: "•";
-  color: #0096c7;
+  color: #1eadff;
   font-weight: bold;
   margin-right: 6px;
 }
@@ -330,7 +319,7 @@ main span {
   color: #333;
   margin: 40px auto 10px auto;
   text-decoration: underline;
-  color: #1976d2;
+  color: #0061f6;
 }
 .section-4 .nacional,
 .section-4 .internacional,
@@ -468,7 +457,7 @@ main span {
 }
 .servicios-extra .texto h3 {
   font-size: 1.5rem;
-  color: #1976d2;
+  color: #0061f6;
   margin-bottom: 15px;
   text-decoration: underline;
 }
@@ -507,6 +496,7 @@ main span {
   font-size: 2rem;
   margin-bottom: 40px;
   color: #0d47a1;
+  font-weight: 700;
 }
 .section-info .info-contenido {
   display: flex;
@@ -529,7 +519,7 @@ main span {
 }
 .section-info .info-contenido .texto h3 {
   margin-bottom: 15px;
-  color: #1976d2;
+  color: #0061f6;
   font-size: 1.5rem;
   text-decoration: underline;
 }
@@ -594,7 +584,7 @@ main span {
   background: #f0f0f0;
 }
 .section-info .info-extra {
-  background: linear-gradient(180deg, #0055b3, #003b80);
+  background: linear-gradient(180deg, #1c4fb1, #1c458c);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   color: #fff;
   padding: 40px 20px;
@@ -720,7 +710,7 @@ main span {
 }
 .contacto .formulario-contacto button {
   grid-column: span 2;
-  background-color: #0d47a1;
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 12px 25px;
@@ -731,8 +721,11 @@ main span {
   transition: 0.3s;
 }
 .contacto .formulario-contacto button:hover {
-  background-color: #1565c0;
+  background-color: #1eadff;
   transform: translateY(-2px);
+}
+.contacto .formulario-contacto button:active {
+  background-color: #48cbff;
 }
 @media (max-width: 700px) {
   .contacto .formulario-contacto button {
@@ -748,7 +741,7 @@ footer {
   padding: 10px;
 }
 footer p, footer span {
-  color: #333;
+  color: #162b55;
   font-weight: 700;
 }
 
@@ -759,7 +752,7 @@ footer p, footer span {
 }
 
 body {
-  background: linear-gradient(135deg, #f3f9ff, #d6ecff, #e3f3ff, #cde4ff);
+  background: linear-gradient(135deg, #b8dfff, #daeeff, #eff8ff);
   background-size: 600% 600%;
   animation: fondoLuzSuave 10s ease-in-out infinite;
   min-height: 100vh;
@@ -791,11 +784,11 @@ body {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 .btn:hover {
-  background-color: #0096c7;
+  background-color: #1eadff;
   transform: scale(1.05);
 }
 .btn:active {
-  background-color: #45b1d5 !important;
+  background-color: #48cbff !important;
 }
 
 .btn-d {
@@ -812,7 +805,7 @@ body {
   transition: background 0.3s ease, transform 0.2s ease;
 }
 .btn-d:hover {
-  background-color: #0096c7;
+  background-color: #1eadff;
   transform: scale(1.05);
 }
 
