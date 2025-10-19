@@ -10,15 +10,16 @@
   }
 
   p {
-      font-size: $textos;
-      text-align: center;
-      margin-bottom: 40px;
+    font-size: $textos;
+    text-align: center;
+    margin-bottom: 40px;
   }
 
   .servicios-grid {
     will-change: transform;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     gap: 30px;
     text-align: center;
     margin: 0 10px 0 10px;
@@ -33,6 +34,7 @@
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
       transition: transform 0.3s ease;
       margin-bottom: 20px;
 
@@ -49,7 +51,7 @@
     @media (max-width: 800px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: 440px){
+    @media (max-width: 520px) {
       grid-template-columns: 1fr;
     }
   }
@@ -106,9 +108,11 @@
   h3 {
     font-size: $titulos-trh;
     color: $title-color;
+    text-align: center;
   }
 
-  span{
+  span {
+    font-weight: 700;
     color: #fff;
   }
 }
